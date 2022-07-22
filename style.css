@@ -8,7 +8,7 @@ body {
     background: rgb(255, 255, 255);
     margin: 20px auto;
     padding: 20px 10px;
-    width: 70%;
+    width: 50%;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
@@ -36,6 +36,13 @@ h2{
 
 li{
     margin-bottom: 10px;
+    line-height: 30px;
+    font-size: 14px;
+}
+
+a{
+    font-weight: 600;
+    text-decoration: none;
 }
 
 .footer, .linkFooter{
@@ -48,10 +55,19 @@ li{
     margin: 0 50px;
 }
 
+@media only screen and (max-width: 900px) {
+    .content{
+        width: 75%;
+    }
+  }
+
 @media only screen and (max-width: 600px) {
     .footer, .linkFooter, .linkFooter:nth-child(2){
         text-align: left;
         display: block;
         margin: 0px 20px;
+    }
+    .content{
+        width: 95%;
     }
   }
