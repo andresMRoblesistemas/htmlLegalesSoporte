@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans');
-
-/* Colores basicos para usar a lo largo del proyecto */
-:root {
+:root {                                     /* Colores basicos para usar a lo largo del proyecto */
     --azul: #0277bd;
     --gris: #646769;
     --fondo: rgb(226, 226, 226);
@@ -13,108 +11,89 @@ body {
     padding: 0;
 }
 * {
-    box-sizing: border-box;
+    box-sizing: border-box;                 /* Cada ancho o alto de los elementos incluye el margin y el padding en la medida final */
 }
 p, h2, h5, h3, h4{
-    padding: 0 10px;
+    padding: 0 10px;                        /* Espaciado a los costados */
 }
 h4, h5{
     color: var(--gris);
-    margin: 10px 0;
-}
-h2{
-    font-weight: 500;
+    margin: 10px 0;                         /* Espaciado arriba y abajo */
 }
 hr{
-    margin: 10px;
+    margin: 10px;                           /* Divisor tiene una separacion por todos lados */
 }
 .navbar{
-  position: fixed;
-  z-index: 1;
-  display: block;
-  clear: both;
+  position: fixed;                          /* posicion fija en la pantalla */
+  z-index: 1;                               /* Va a estar arriba de los demas elementos */
+  display: block;                           /* El unico elemento en la linea */
   width: 100%;
   background-color: var(--azul);
-  padding: 0px 20px;
-  margin: 0 0 10px;
-  min-height: 50px;
-  color: white;
-  box-shadow: 0 0 8px var(--gris);
-  font-weight: 500;
+  padding: 0 20px;
+  box-shadow: 0 0 8px var(--gris);          /* sombra leve bajo la barra azul */
+  color: white;                           /* color que afecta al texto y los iconos */
 }
 .titulo{
+  font-weight: 500;                         /* se afina la letra para contrarestar el estilo de h2 */
   float: left;
 }
 .activarMenu{
-  display: none;
+  display: none;                            /* el icono de menu no se va a mostrar */
 }
 .col {
   background-color: white;
-  min-width: 200px;
-  /* margin: 0 10px 0px 0px; */
 }
 .colTabladecontenido{
-  flex: 10%;
+  flex: 10%;                                
   position: fixed;
-  overflow-y: scroll;
-  top: 70px;
-  bottom: 0px;
-  padding-bottom: 50px;
+  overflow-y: scroll;                       /* permite que, aun siendo un div fijo, se pueda hacer scroll vertical*/
+  top: 70px;                                /* la position fija comienza 70px alejada del borde superior */
+  bottom: 0px;                              /* la position fija comienza pegada al borde inferior */
+  padding-bottom: 50px;                     /* espacio en blanco para que al hacer scroll el contenido quede mas arriba */
 }
 .colContenido{
-  margin-left: 230px;
+  margin-left: 230px;                       /* espacio a la izquierda para no superponerse con .colTabladeContenido */
   margin-right: 10px;
 }
 .enlace {
   padding: 0 10px 5px;
   display: block;
-  text-decoration: none;
+  text-decoration: none;                    /* le quita el subrayado a los links */
   color: var(--gris);
-  font-weight: 500;
-  word-wrap: break-word;
+  word-wrap: break-word;                    /* si el texto es mas ancho que el div, continua abajo */
 }
-.enlace:hover{
-  color: var(--azul);
+.enlace:hover{                              /* al pasar sobre un enlace cambia el color de la letra, el fondo y el peso */
+  color: var(--azul);                       
   background-color: #bad7e5b2;
   font-weight: 700;
 }
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
 .row{
-  margin-top: 90px;
-  position: absolute;
-  display: flex;
+  margin-top: 90px;                         /* se hace espacio arriba para el navbar */
+  position: absolute;                       /* toma su posicion dentro del div padre */
+  display: flex;                            /* permite que colTabladeContenido tome un ancho y colContenido ocupe el resto */
 }
-/* Las imagenes comienzan a acomodarse desde el centro */
 .imagenes{
-  text-align: center;
+  text-align: center;                       /* Las imagenes comienzan a acomodarse desde el centro */
 }
-/* Las imagenes tendran un alto max de 200px, y se separan de las demas imagenes 10px hacia la derecha y abajo */
 img{
-  max-height: 200px;
+  max-height: 200px;                        /* Las imagenes tendran un alto max de 200px, y se separan de las demas imagenes 10px hacia la derecha y abajo */
   margin-bottom: 10px;
   margin-right: 10px;
 }
 
 /* Estos cambios toman efecto cuando la pantalla tiene un ancho menor a 600px */
 @media only screen and (max-width: 600px) {
-    /* Desaparece la tabla de contenido */
   .colTabladecontenido{
-      display: none;
+      display: none;                        /* Desaparece la tabla de contenido */
   }
-  /* Muestra el icono de menu desplegable */
   .activarMenu{
       padding: 10px 0;
       font-size: 30px;
-      float: right;
-      display: block;
+      float: right;                         /* Muestra el icono de menu desplegable a la derecha*/
+      display: block;                       /* unico elemento de la linea pero no compite coon el .titulo ya que ambos tienen float */
   }
-  /* La columna con el contenido principal ocupa casi todo el ancha al desaparecer la tabla de contenido */
   .colContenido{
       width: 95%;
-      margin-left: 10px;
+      margin-left: 10px;                    /* La columna con el contenido principal ocupa casi todo el ancha al desaparecer la tabla de contenido */
   }
 }
