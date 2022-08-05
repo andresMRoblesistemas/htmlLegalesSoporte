@@ -41,10 +41,10 @@ hr{
 .activarMenu{
   display: none;                            /* el icono de menu no se va a mostrar */
 }
-.colTabladecontenido, .articulo{
+.menuLateral, .articulo{
   background-color: white;
 }
-.colTabladecontenido{
+.menuLateral{
   position: fixed;
   overflow-y: scroll;                       /* permite que, aun siendo un div fijo, se pueda hacer scroll vertical*/
   top: 70px;                                /* la position fija comienza 70px alejada del borde superior */
@@ -105,6 +105,7 @@ iframe{
   bottom:110px;
   right:12px;
   width: 200px;
+  height: 200px;
   opacity:0;
   padding: 10px;
   pointer-events:none;
@@ -119,21 +120,33 @@ iframe{
   opacity:1;
   pointer-events:auto;
 }
-.close{
+.cerrar, .cerrarMenuLateral{
+  position: absolute;
+  top: 20px;
+  right: 20px;
   color: var(--gris);
-  float: right;
-  margin-right: 5px;
-  margin-top: 3px;
   font-size: 15px;
   font-weight: bold;
   cursor: pointer;
 }
 
+.cerrarMenuLateral{
+  display: none;
+}
+
 
 /* ESTOS CAMBIOS TOMAN EFECTO CUANDO LA PANTALLA TIENE UN ANCHO MENOR A 600PX */
 @media only screen and (max-width: 600px) {
-  .colTabladecontenido{
+  .menuLateral{
       display: none;                        /* Desaparece la tabla de contenido */
+  }
+  #menuLateral:target{
+    display: block;
+    z-index: 5;
+    width: 100%;
+  }
+  .cerrarMenuLateral{
+    display: block;                         
   }
   .activarMenu{
       padding: 10px 0;
