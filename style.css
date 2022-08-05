@@ -13,9 +13,10 @@ body {
 * {
     box-sizing: border-box;                 /* Cada ancho o alto de los elementos incluye el margin y el padding en la medida final */
 }
-h2, h3, h4, label{
+h2, h3, label{
     padding: 0 10px;                        /* Espaciado a los costados */
 }
+
 h4, h5{
     color: var(--gris);
     margin: 10px 0;                         /* Espaciado arriba y abajo */
@@ -40,7 +41,7 @@ hr{
 .activarMenu{
   display: none;                            /* el icono de menu no se va a mostrar */
 }
-.col {
+.col, .articulo{
   background-color: white;
 }
 .colTabladecontenido{
@@ -51,10 +52,12 @@ hr{
   padding-bottom: 50px;                     /* espacio en blanco para que al hacer scroll el contenido quede mas arriba */
   max-width: 220px;                         /* se limita el ancho para que no crezca con el texto interior */
 }
+.seccionTdC{
+  padding-left: 10px;
+}
 .colContenido{
   margin-left: 230px;                       /* espacio a la izquierda para no superponerse con .colTabladeContenido */
   margin-right: 10px;
-  padding-bottom: 50px;
 }
 .enlace {
   padding: 0 10px 5px;
@@ -73,13 +76,10 @@ hr{
   top:-100px
 }
 .articulo{
-  padding: 10px;
+  margin-top: 50px;
+  padding: 20px 20px;
 }
-.row{
-  margin-top: 90px;                         /* se hace espacio arriba para el navbar */
-  position: absolute;                       /* toma su posicion dentro del div padre */
-  display: flex;                            /* permite que colTabladeContenido tome un ancho y colContenido ocupe el resto */
-}
+
 .imagenes{
   text-align: center;                       /* Las imagenes comienzan a acomodarse desde el centro */
 }
@@ -89,63 +89,18 @@ img{
   margin-right: 10px;
 }
 .bot{
-  position: fixed;
-  bottom: 90px;
-  right: 90px;
-  height: 50px;
-  width: 50px;
+  position: fixed;                          /* el icono del bot se encuentra flotando abajo a la derecha en la pantalla */
+  bottom: 10px;
+  right: 10px;
   transition: all 0.3s;
-  /* padding: 20px; */
 }
 .bot:hover{
-  transform: scale(1.3) rotate(-5deg);
+  transform: scale(1.1) rotate(-5deg);      /* la imagen del bot se inclina un poquito */
 }
-
-/* ↓↓↓↓ COLAPSAR ARTICULOS DE AYUDA ↓↓↓↓*/
-/* codigo copiado de https://codepen.io/jason-knight/pen/ZEWPPVZ */
-
-.toggle_collapse {
-  display:block; 
+iframe{
+  width: 100%;
+  height: 100%;
 }
-
-.toggle_collapse, /* hide off screen */
-.toggle_collapse + *  .collapseAfter ~ * {
-	position:absolute;
-	top:-999em;
-	left:-999em;
-}
-
-.toggle_collapse:checked + *  .collapseAfter ~ * {
-  position:static;
-}
-
-.toggle_collapse + * + label {
-  display:inline-block; /* make visible for screen media */
-  color:var(--azul);
-}
-
-.toggle_collapse + * + label:before {
-	content:"Mostrar más";
-}
-
-.toggle_collapse:checked + * + label:before {
-	content:"Mostrar menos";
-}
-
-.toggle_collapse + * + label:after {
-	content:"\25BC";
-	display:inline-block;
-	padding:0.4em 0 0 0.3em;
-	vertical-align:top;
-	font-size:0.625em;
-}
-
-.toggle_collapse:checked + * + label:after {
-	content:"\25B2";
-}
-
-/* ↑↑↑↑↑↑ COLAPSAR ARTICULOS DE AYUDA ↑↑↑↑↑↑*/
-
 /* Estos cambios toman efecto cuando la pantalla tiene un ancho menor a 600px */
 @media only screen and (max-width: 600px) {
   .colTabladecontenido{

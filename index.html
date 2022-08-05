@@ -5,13 +5,18 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>CDM - Asistencia</title>
         <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
         <link rel="manifest" href="/site.webmanifest">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
         <link href='https://css.gg/css' rel='stylesheet'>
+        <script>
+            function resizeIframe(obj) {
+              obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
+            }
+          </script>
     </head>
     <body>
         <div class="navbar">
@@ -20,15 +25,15 @@
         <div class="row">
         <div class="col colTabladecontenido">
             <h2>Articulos</h2>
-            <h4>Crear cuenta</h4>
-            <a class="enlace" href="#tema1">Tema de ayuda 1</a>
-            <a class="enlace" href="#tema21">Tema 2</a>
-            <a class="enlace" href="#tema3">Validar datos</a>
+            <h4 class="seccionTdC">Crear cuenta</h4>
+            <a class="enlace" href="/vistas/tema1.html" target="vista">Tema de ayuda 1</a>
+            <a class="enlace" href="/vistas/tema2.html" target="vista">Tema 2</a>
+            <a class="enlace" href="/vistas/tema3.html" target="vista">Validar datos</a>
             <a class="enlace" href="#tema4">Tema 4</a>
             <a class="enlace" href="#tema5">Tema 5</a>
             <a class="enlace" href="#tema6">Tema 6</a>
             <hr>
-            <h4>Recuperar contraseña</h4>
+            <h4 class="seccionTdC">Recuperar contraseña</h4>
             <a class="enlace" href="#tema7">Tema 7 con titulo largo que continua abajo</a>
             <a class="enlace" href="#tema8">Tema 8</a>
             <a class="enlace" href="#tema9">Tema 9</a>
@@ -41,100 +46,7 @@
         </div>
 
         <div class="col colContenido">
-            <h2>Crear cuenta</h2>
-            <!--  ↓↓↓↓ ACA ESTA EL MODELO DE ARTICULO ↓↓↓↓
-
-            <input type="checkbox" id="🔥CAMBIAR: nombre unico y representativo" class="toggle_collapse" hidden aria-hidden="true">
-            <div class="articulo">
-                
-                <div class="anclajeLink" id="🔥CAMBIAR:coincidir con el link al que se apunta desde colTablaDeContenidos"></div>
-                <h5>🔥CAMBIAR: Titulo de la seccion</h5>
-                <p class="collapseAfter">
-                    🔥CAMBIAR: Contenido de cada parrafo nuevo va entre etiquetas <p> y </p>
-                </p>
-                <div class="imagenes">
-                    <img src="assets/contrasena.png" alt=""> 🔥CAMBIAR: Imagenes segun sea necesario
-                    <img src="assets/mapa.png" alt="">
-                </div>
-                <p>
-                    Adipisicing elit commodo ipsum laboris deserunt qui aliqua eu eiusmod sit laboris laborum. Proident ut laboris mollit cillum magna in nostrud eu excepteur ut fugiat in labore amet. Ullamco tempor aute culpa irure Lorem occaecat. Incididunt ullamco cillum nulla elit mollit. Nostrud occaecat officia amet nostrud sunt incididunt commodo. Ullamco veniam id minim ad cupidatat irure reprehenderit reprehenderit dolore sit. Aliquip anim ullamco sint voluptate excepteur in eiusmod fugiat anim.
-                </p>
-                <p>
-                    Laboris non velit dolor anim minim enim laborum eu ipsum qui pariatur incididunt officia consectetur. Reprehenderit fugiat officia excepteur laborum mollit proident fugiat in. Minim elit velit exercitation cillum exercitation culpa do aliqua nostrud aute ipsum eiusmod. Adipisicing quis duis elit incididunt elit ex reprehenderit aute consectetur. Ipsum et amet deserunt excepteur. Exercitation enim et cupidatat officia sunt elit. Magna officia non magna magna ipsum et ipsum irure. Aliqua et minim in ipsum ipsum deserunt cupidatat deserunt ut ad.
-                </p>
-            </div>
-            <label for="🔥CAMBIAR: debe coincidir con id del checkbox de arriba" hidden aria-hidden="true"></label> 
-            <hr>
-            
-            ↑↑↑↑↑↑ MODELO DE ARTICULO ↑↑↑↑↑↑ -->
-            <input type="checkbox" id="toggle_testSection" class="toggle_collapse" hidden aria-hidden="true">
-            <div class="articulo">
-                
-                <div class="anclajeLink" id="tema1"></div>
-                <h5>Tema de ayuda 1</h5>
-                <p class="collapseAfter">
-                    Lorem elit id exercitation aute ullamco consectetur qui qui duis aute eu nisi. Ullamco aute officia cupidatat veniam consequat ea proident dolor. Eiusmod aute esse consequat cillum et ad. Commodo duis mollit nisi nostrud culpa.
-                </p>
-                <div class="imagenes">
-                    <img src="assets/contrasena.png" alt="">
-                    <img src="assets/mapa.png" alt="">
-                </div>
-                <p>
-                    Adipisicing elit commodo ipsum laboris deserunt qui aliqua eu eiusmod sit laboris laborum. Proident ut laboris mollit cillum magna in nostrud eu excepteur ut fugiat in labore amet. Ullamco tempor aute culpa irure Lorem occaecat. Incididunt ullamco cillum nulla elit mollit. Nostrud occaecat officia amet nostrud sunt incididunt commodo. Ullamco veniam id minim ad cupidatat irure reprehenderit reprehenderit dolore sit. Aliquip anim ullamco sint voluptate excepteur in eiusmod fugiat anim.
-                </p>
-                <p>
-                    Laboris non velit dolor anim minim enim laborum eu ipsum qui pariatur incididunt officia consectetur. Reprehenderit fugiat officia excepteur laborum mollit proident fugiat in. Minim elit velit exercitation cillum exercitation culpa do aliqua nostrud aute ipsum eiusmod. Adipisicing quis duis elit incididunt elit ex reprehenderit aute consectetur. Ipsum et amet deserunt excepteur. Exercitation enim et cupidatat officia sunt elit. Magna officia non magna magna ipsum et ipsum irure. Aliqua et minim in ipsum ipsum deserunt cupidatat deserunt ut ad.
-                </p>
-            </div>
-            <label for="toggle_testSection" hidden aria-hidden="true"></label>
-            <hr>
-
-            <input type="checkbox" id="tema2" class="toggle_collapse" hidden aria-hidden="true">
-            <div class="articulo">
-                
-                <div class="anclajeLink" id="tema21"></div>
-                <h5>Tema de ayuda 2</h5>
-                <p class="collapseAfter">
-                    Lorem elit id exercitation  ad. Commodo duis mollit nisi nostrud.
-                </p>
-                <div class="imagenes">
-                    <img src="assets/mapa.png" alt="">
-                </div>
-                <p>
-                    Adipisicing elit commodo ipsum laboris deserunt qui aliqua eu eiusmod sit laboris laborum. Proident ut laboris mollit cillum magna in nostrud eu excepteur ut fugiat in labore amet. Ullamco tempor aute culpa irure Lorem occaecat. Incididunt ullamco cillum nulla elit mollit. Nostrud occaecat officia amet nostrud sunt incididunt commodo. Ullamco veniam id minim ad cupidatat irure reprehenderit reprehenderit dolore sit. Aliquip anim ullamco sint voluptate excepteur in eiusmod fugiat anim.
-                </p>
-                <ul>
-                    <li>Item 1</li>
-                    <li>Item 2</li>
-                </ul>
-                <p>
-                    Laboris non velit dolor anim minim enim laborum eu ipsum qui pariatur incididunt officia consectetur. Reprehenderit fugiat officia excepteur laborum mollit proident fugiat in. Minim elit velit exercitation cillum exercitation culpa do aliqua nostrud aute ipsum eiusmod. Adipisicing quis duis elit incididunt elit ex reprehenderit aute consectetur. Ipsum et amet deserunt excepteur. Exercitation enim et cupidatat officia sunt elit. Magna officia non magna magna ipsum et ipsum irure. Aliqua et minim in ipsum ipsum deserunt cupidatat deserunt ut ad.
-                </p>
-            </div>
-            <label for="tema2" hidden aria-hidden="true"></label>
-            <hr>
-            
-            <input type="checkbox" id="temas3" class="toggle_collapse" hidden aria-hidden="true">
-            <div class="articulo">
-                
-                <div class="anclajeLink" id="tema3"></div>
-                <h5>Validar datos</h5>
-                <p class="collapseAfter">
-                    En esta sección repasaremos como validar su correo y su télefono 
-                </p>
-                <div class="imagenes">
-                    <img src="assets/bot.png" alt="">
-                </div>
-                <p>
-                    Adipisicing elit commodo ipsum laboris deserunt qui aliqua eu eiusmod sit laboris laborum. Proident ut laboris mollit cillum magna in nostrud eu excepteur ut fugiat in labore amet. Ullamco tempor aute culpa irure Lorem occaecat. Incididunt ullamco cillum nulla elit mollit. Nostrud occaecat officia amet nostrud sunt incididunt commodo. Ullamco veniam id minim ad cupidatat irure reprehenderit reprehenderit dolore sit. Aliquip anim ullamco sint voluptate excepteur in eiusmod fugiat anim.
-                </p>
-                <p>
-                    Laboris non velit dolor anim minim enim laborum eu ipsum qui pariatur incididunt officia consectetur. Reprehenderit fugiat officia excepteur laborum mollit proident fugiat in. Minim elit velit exercitation cillum exercitation culpa do aliqua nostrud aute ipsum eiusmod. Adipisicing quis duis elit incididunt elit ex reprehenderit aute consectetur. Ipsum et amet deserunt excepteur. Exercitation enim et cupidatat officia sunt elit. Magna officia non magna magna ipsum et ipsum irure. Aliqua et minim in ipsum ipsum deserunt cupidatat deserunt ut ad.
-                </p>
-            </div>
-            <label for="temas3" hidden aria-hidden="true"></label> 
-            <hr>
-        
+            <iframe src="" name="vista" frameborder="0" class="vista" scrolling="no" onload="resizeIframe(this)"></iframe>
         </div>
         </div>
     </body>
