@@ -159,6 +159,6 @@ img{
   }
   .colContenido{
       width: 95%;
-      margin-left: 10px;                    /* La columna con el contenido principal ocupa casi todo el ancha al desaparecer la tabla de contenido */
+      margin-left: 10px;                    /* La columna con el contenido principal ocupa casi todo el ancho al desaparecer la tabla de contenido */
   }
 }
