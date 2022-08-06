@@ -38,7 +38,7 @@ hr{
   font-weight: 500;                         /* se afina la letra para contrarestar el estilo de h2 */
   float: left;
 }
-.activarMenu{
+.activarMenu, .cerrarMenuLateral{
   display: none;                            /* el icono de menu no se va a mostrar */
 }
 .menuLateral, .articulo{
@@ -52,7 +52,7 @@ hr{
   padding-bottom: 50px;                     /* espacio en blanco para que al hacer scroll el contenido quede mas arriba */
   max-width: 220px;                         /* se limita el ancho para que no crezca con el texto interior */
 }
-.seccionTdC{
+.seccionMenuLateral{
   padding-left: 10px;
 }
 .colContenido{
@@ -130,10 +130,6 @@ iframe{
   cursor: pointer;
 }
 
-.cerrarMenuLateral{
-  display: none;
-}
-
 
 /* ESTOS CAMBIOS TOMAN EFECTO CUANDO LA PANTALLA TIENE UN ANCHO MENOR A 600PX */
 @media only screen and (max-width: 600px) {
@@ -141,14 +137,14 @@ iframe{
       display: none;                        /* Desaparece la tabla de contenido */
   }
   #menuLateral:target{
-    display: block;
     z-index: 5;
     width: 100%;
   }
-  .cerrarMenuLateral{
+  .cerrarMenuLateral, #menuLateral:target{
     display: block;                         
   }
   .activarMenu{
+    color: white;
       padding: 10px 0;
       font-size: 30px;
       float: right;                         /* Muestra el icono de menu desplegable a la derecha*/
