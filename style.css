@@ -51,6 +51,7 @@ hr{
   bottom: 0px;                              /* la position fija comienza pegada al borde inferior */
   padding-bottom: 50px;                     /* espacio en blanco para que al hacer scroll el contenido quede mas arriba */
   max-width: 220px;                         /* se limita el ancho para que no crezca con el texto interior */
+  font-size: 14px;
 }
 .seccionMenuLateral{
   padding-left: 10px;
@@ -72,25 +73,40 @@ hr{
   font-weight: 700;
 }
 .articulo{
-  margin-top: 50px;
+  margin-top: 80px;
   padding: 20px 20px;
+  margin-bottom: 80px;
+}
+.articulo h2{
+  padding: 0;
 }
 
 .imagenes{
   text-align: center;                       /* Las imagenes comienzan a acomodarse desde el centro */
+  font-style: italic;
+}
+.imagen{
+  display: inline;
 }
 img{
   max-height: 200px;                        /* Las imagenes tendran un alto max de 200px, y se separan de las demas imagenes 10px hacia la derecha y abajo */
   margin-bottom: 10px;
   margin-right: 10px;
+  transition: all 0.3s;
 }
+
+img:hover{
+  transform: scale(2);
+  box-shadow: 0 0 8px var(--gris);
+}
+
 .bot{
   position: fixed;                          /* el icono del bot se encuentra flotando abajo a la derecha en la pantalla */
   bottom: 10px;
   right: 10px;
   transition: all 0.3s;
 }
-.bot:hover{
+.botImg:hover{
   transform: scale(1.1) rotate(-5deg);      /* la imagen del bot se inclina un poquito */
 }
 iframe{
