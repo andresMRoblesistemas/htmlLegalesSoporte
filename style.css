@@ -137,7 +137,7 @@ iframe{
       display: none;                        /* Desaparece la tabla de contenido */
   }
   #menuLateral:target{
-    z-index: 5;
+    z-index: 2;
     width: 100%;
   }
   .cerrarMenuLateral, #menuLateral:target{
