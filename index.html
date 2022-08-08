@@ -34,22 +34,30 @@
             <div class="col menuLateral" id="menuLateral">
                 <h2>Articulos</h2><a href="#"> <span class="cerrarMenuLateral">X</span> </a>
                 <h4 class="seccionMenuLateral">Crear cuenta en CDM</h4>
-                <a class="enlace" href="vistas/tema1.html" target="vista">Paso 1 - Inicio de Sesión</a>
-                <a class="enlace" href="vistas/tema2.html" target="vista">Paso 2 - Datos Personales</a>
-                <a class="enlace" href="vistas/tema3.html" target="vista">Paso 3 - Datos de Contacto</a>
-                <a class="enlace" href="vistas/tema4.html" target="vista">Paso 4 - Terminos y Condiciones</a>
+                <input type="checkbox" id="crearCuenta" class="toggle_collapse" hidden aria-hidden="true">
+                <div>
+                <p class="collapseAfter"><a class="enlace" href="vistas/tema1.html" target="vista">Paso 1 - Inicio de Sesión</a></p>
+                    <a class="enlace" href="vistas/tema2.html" target="vista">Paso 2 - Datos Personales</a>
+                    <a class="enlace" href="vistas/tema3.html" target="vista">Paso 3 - Datos de Contacto</a>
+                    <a class="enlace" href="vistas/tema4.html" target="vista">Paso 4 - Terminos y Condiciones</a>
+                </div>
+                <label for="crearCuenta" hidden aria-hidden="true"></label>
                 <hr>
                 <h4 class="seccionMenuLateral">Ingresar a CDM</h4>
-                <a class="enlace" href="vistas/tema5.html" target="vista">Datos de Inicio de Sesión</a>
-                <a class="enlace" href="vistas/tema6.html" target="vista">Reestablecer contraseña</a>
-                <ul>
-                    <li>
-                        <a class="enlace" href="vistas/tema6.html#portelefono" target="vista">Por teléfono</a>
-                    </li>
-                    <li>
-                        <a class="enlace" href="vistas/tema6.html#porcorreo" target="vista">Por correo</a>
-                    </li>
-                </ul>
+                <input type="checkbox" id="ingresarCDM" class="toggle_collapse" hidden aria-hidden="true">
+                <div>
+                    <p class="collapseAfter"><a class="enlace" href="vistas/tema5.html" target="vista">Datos de Inicio de Sesión</a></p>
+                    <a class="enlace" href="vistas/tema6.html" target="vista">Reestablecer contraseña</a>
+                    <ul>
+                        <li>
+                            <a class="enlace" href="vistas/tema6.html#portelefono" target="vista">Por teléfono</a>
+                        </li>
+                        <li>
+                            <a class="enlace" href="vistas/tema6.html#porcorreo" target="vista">Por correo</a>
+                        </li>
+                    </ul>
+                </div>
+                <label for="ingresarCDM" hidden aria-hidden="true"></label>
             </div>
             <div class="bot">
                 <a href="#abrirChat"> <img class="botImg" src="/assets/bot.png" alt="">

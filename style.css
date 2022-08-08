@@ -152,6 +152,53 @@ img:hover{
   cursor: pointer;
 }
 
+/* ↓↓↓↓ COLAPSAR ARTICULOS DE AYUDA ↓↓↓↓*/
+/* codigo original https://codepen.io/jason-knight/pen/ZEWPPVZ */
+
+.toggle_collapse {
+  display:block; 
+}
+
+.toggle_collapse, /* hide off screen */
+.toggle_collapse + *  .collapseAfter ~ * {
+	position:absolute;
+	top:-999em;
+	left:-999em;
+  margin: 0;
+}
+
+.toggle_collapse:checked + *  .collapseAfter ~ * {
+  position:static;
+}
+
+.toggle_collapse + * + label {
+  display:inline-block; /* make visible for screen media */
+  color:var(--gris);
+}
+
+.toggle_collapse + * + label:before {
+	content:"Mostrar más";
+  font-weight: 600;
+}
+
+.toggle_collapse:checked + * + label:before {
+	content:"Mostrar menos";
+}
+
+.toggle_collapse + * + label:after {
+	content:"\25BC";
+	display:inline-block;
+	padding:0.4em 0 0 0.3em;
+	vertical-align:top;
+	font-size:0.625em;
+}
+
+.toggle_collapse:checked + * + label:after {
+	content:"\25B2";
+}
+
+/* ↑↑↑↑↑↑ COLAPSAR ARTICULOS DE AYUDA ↑↑↑↑↑↑*/
+
 
 /* ESTOS CAMBIOS TOMAN EFECTO CUANDO LA PANTALLA TIENE UN ANCHO MENOR A 600PX */
 @media only screen and (max-width: 600px) {
