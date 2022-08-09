@@ -33,19 +33,19 @@
     </head>
     <body >
         <div class="cdm-navbar">
-            <h2 class="cdm-titulo">Asistencia</h2><a href="#menuLateral"><label class="cdm-activarMenu">&#9776;</label></a></div>
+            <h2 class="cdm-titulo">Asistencia</h2><a href="#cdm-menuLateral"><label class="cdm-activarMenu">&#9776;</label></a></div>
         </div>
         <div class="cdm-row">
-            <div class="cdm-col cdm-menuLateral" id="menuLateral">
+            <div class="cdm-col cdm-menuLateral" id="cdm-menuLateral">
                 <h2>Articulos</h2><a href="#"> <span class="cdm-cerrarMenuLateral">X</span> </a>
 
                 <h4 class="cdm-seccionMenuLateral">Crear cuenta en CDM</h4>
                 <input type="checkbox" id="crearCuenta" class="cdm-toggle_collapse" hidden aria-hidden="true">
                 <div>
-                <p class="cdm-collapseAfter"><a class="cdm-enlace" href="vistas/tema1.html" target="vista">Paso 1 - Inicio de Sesión</a></p>
-                    <a class="cdm-enlace" href="vistas/tema2.html" target="vista">Paso 2 - Datos Personales</a>
-                    <a class="cdm-enlace" href="vistas/tema3.html" target="vista">Paso 3 - Datos de Contacto</a>
-                    <a class="cdm-enlace" href="vistas/tema4.html" target="vista">Paso 4 - Terminos y Condiciones</a>
+                <p class="cdm-collapseAfter"><a class="cdm-enlace" href="vistas/tema1.html#00" target="vista">Paso 1 - Inicio de Sesión</a></p>
+                    <a class="cdm-enlace" href="vistas/tema2.html#00" target="vista">Paso 2 - Datos Personales</a>
+                    <a class="cdm-enlace" href="vistas/tema3.html#00" target="vista">Paso 3 - Datos de Contacto</a>
+                    <a class="cdm-enlace" href="vistas/tema4.html#00" target="vista">Paso 4 - Terminos y Condiciones</a>
                 </div>
                 <label for="crearCuenta" hidden aria-hidden="true"></label>
                 <hr>
@@ -53,14 +53,14 @@
                 <h4 class="cdm-seccionMenuLateral">Ingresar a CDM</h4>
                 <input type="checkbox" id="ingresarCDM" class="cdm-toggle_collapse" hidden aria-hidden="true">
                 <div>
-                    <p class="cdm-collapseAfter"><a class="cdm-enlace" href="vistas/tema5.html" target="vista">Datos de Inicio de Sesión</a></p>
-                    <a class="cdm-enlace" href="vistas/tema6.html" target="vista">Reestablecer contraseña</a>
+                    <p class="cdm-collapseAfter"><a class="cdm-enlace" href="vistas/tema5.html#00" target="vista">Datos de Inicio de Sesión</a></p>
+                    <a class="cdm-enlace" href="vistas/tema6.html#00" target="vista">Reestablecer contraseña</a>
                     <ul>
                         <li>
-                            <a class="cdm-enlace" href="vistas/tema6.html#portelefono" target="vista">Por teléfono</a>
+                            <a class="cdm-enlace" href="vistas/tema6.html#01" target="vista">Por teléfono</a>
                         </li>
                         <li>
-                            <a class="cdm-enlace" href="vistas/tema6.html#porcorreo" target="vista">Por correo</a>
+                            <a class="cdm-enlace" href="vistas/tema6.html#02" target="vista">Por correo</a>
                         </li>
                     </ul>
                 </div>
@@ -75,16 +75,17 @@
                     <a class="cdm-enlace" href="vistas/tema7.html#03" target="vista">Editar Datos Personales</a>
                     <a class="cdm-enlace" href="vistas/tema7.html#04" target="vista">Editar Direcciones</a>
                     <a class="cdm-enlace" href="vistas/tema7.html#05" target="vista">Editar Números de Teléfono</a>
+                    <a class="cdm-enlace" href="vistas/tema8.html#00" target="vista">Validación de datos</a>
                 </div>
                 <label for="perfilDeUsuario" hidden aria-hidden="true"></label>
                 <hr>
             </div>
             <div class="cdm-bot">
-                <a href="#abrirChat"> <img class="cdm-botImg" src="/assets/bot.png" alt="">
+                <a href="#cdm-abrirChat"> <img class="cdm-botImg" src="/assets/bot.png" alt="">
                 </a>
             </div>
-            <div id="abrirChat" class="cdm-botChat">
-                <a href="#"> <span class="cdm-cerrar">X</span> </a>
+            <div id="cdm-abrirChat" class="cdm-botChat">
+                <a href=""><span class="cdm-cerrar">X</span> </a>
                 <h5>Necesitas ayuda? </h5>
                 <p>Escribi tu consulta:</p>
                 <p> </p>
@@ -92,7 +93,7 @@
                 <hr>
             </div>
             <div class="cdm-col cdm-colContenido">
-                <iframe src="vistas/tema7.html" id="vista" name="vista" frameborder="0" class="cdm-vistaDefault" scrolling="no" onload="resizeIframe(this); cargarRutaEnMarco(pagina); "></iframe>
+                <iframe src="vistas/tema8.html#00" id="vista" name="vista" frameborder="0" class="cdm-vistaDefault" scrolling="no" onload="resizeIframe(this); cargarRutaEnMarco(pagina); "></iframe>
             </div>
         </div>
     </body>

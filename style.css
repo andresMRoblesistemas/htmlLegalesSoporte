@@ -32,11 +32,8 @@ ul{
   margin: 0 5px;
   color: var(--gris);
 }
-.cdm-page404{
-  text-align: center;
-}
 .cdm-button {
-  border-radius: 5px;
+  border-radius: 7px;
   margin: 5px;
   padding: 8px 15px;
   color: white;
@@ -86,10 +83,14 @@ ul{
   color: var(--gris);
   word-wrap: break-word;                    /* si el texto es mas ancho que el div, continua abajo */
 }
-.cdm-enlace:hover{                              /* al pasar sobre un enlace cambia el color de la letra, el fondo y el peso */
+.cdm-enlace:hover{                          /* al pasar sobre un enlace cambia el color de la letra, el fondo y el peso */
   color: var(--azul);                       
   background-color: var(--azulSecundario);
   font-weight: 700;
+}
+.cdm-aterriza-link {
+  position: relative;                       /* hace coincidir a donde aterrizar los links a las secciones con la posicion real del titulo de la seccion */
+  top:-90px;
 }
 .cdm-articulo{
   margin-top: 80px;
@@ -100,9 +101,8 @@ ul{
   padding: 0;
 }
 
-.cdm-filaImagenes{
+.cdm-filaImagenes, .cdm-page404{
   text-align: center;                       /* Las imagenes comienzan a acomodarse desde el centro */
-  font-style: italic;
 }
 .cdm-imagen{
   display: inline;
@@ -116,8 +116,8 @@ img{
 }
 
 img:hover{
-  transform: scale(2);
-  box-shadow: 0 0 8px var(--gris);
+  transform: scale(2);                      /* al pasar el mouse por encima, la imagen duplica su tamaño */
+  box-shadow: 0 0 8px var(--gris);          /* la imagen obtiene una sombra alrededor para resaltarla del fondo */
 }
 
 .cdm-bot{
@@ -133,19 +133,18 @@ img:hover{
 .cdm-botChat{
   background-color: white;
   color: black;
-  position: fixed;
+  position: fixed;                          /* posicion fija en la pantalla, no importa el scroll. 110px separado de abajo y 12 del lado derecho */
   bottom:110px;
   right:12px;
   width: 200px;
   height: 200px;
-  opacity:0;
+  opacity:0;                                /* opacidad en 0 para que solo se vea cuando se hace clic a la imagen del bot */
   padding: 10px;
   pointer-events:none;
   overflow: initial !important;
   transition: all 0.5s;
   border-radius: 7px;
-  box-shadow: 0 0 10px var(--gris);
-
+  box-shadow: 0 0 8px var(--gris);
 }
 
 #cdm-abrirChat:target{
@@ -226,10 +225,10 @@ img:hover{
   }
   .cdm-activarMenu{
     color: white;
-      padding: 10px 0;
-      font-size: 30px;
-      float: right;                         /* Muestra el icono de menu desplegable a la derecha*/
-      display: block;                       /* unico elemento de la linea pero no compite coon el .titulo ya que ambos tienen float */
+    padding: 10px 0;
+    font-size: 30px;
+    float: right;                         /* Muestra el icono de menu desplegable a la derecha*/
+    display: block;                       /* unico elemento de la linea pero no compite coon el .titulo ya que ambos tienen float */
   }
   .cdm-colContenido{
       width: 95%;
