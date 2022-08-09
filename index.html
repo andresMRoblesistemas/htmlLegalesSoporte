@@ -16,12 +16,18 @@
               obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
             }
 
-            // const params = new URLSearchParams(document.location.search);
-            // const pagina = params.get("s");
-            pagina = "vistas/tema3.html";
+            const params = new URLSearchParams(document.location.search);
+            //params.len === null ? pagina = "../vistas/bienvenida.html" : pagina = params.get("s");
+            const pagina = params.get("s");
+            contador = 0;
 
             function cargarRutaEnMarco(pagina){
-                document.getElementById("vista").src = pagina;
+                if (contador<1) {
+                    document.getElementById("vista").src = pagina;
+                    contador++;
+                } else {
+                    pagina = "../vistas/bienvenida.html";
+                }
             }
         </script>
     </head>
@@ -71,7 +77,7 @@
                 <hr>
             </div>
             <div class="col colContenido">
-                <iframe src="vistas/tema6.html" id="vista" name="vista" frameborder="0" class="vistaDefault" scrolling="no" onload="resizeIframe(this); /* cargarRutaEnMarco(pagina); */"></iframe>
+                <iframe src="vistas/bienvenida.html" id="vista" name="vista" frameborder="0" class="vistaDefault" scrolling="no" onload="resizeIframe(this); cargarRutaEnMarco(pagina); "></iframe>
             </div>
         </div>
     </body>

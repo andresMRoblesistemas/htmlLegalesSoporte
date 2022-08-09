@@ -32,6 +32,17 @@ ul{
   margin: 0 5px;
   color: var(--gris);
 }
+.page404{
+  text-align: center;
+}
+button {
+  border-radius: 5px;
+  margin: 5px;
+  padding: 8px 15px;
+  color: white;
+  background-color: var(--azul);
+  border: 0px;
+}
 .navbar{
   position: fixed;                          /* posicion fija en la pantalla */
   z-index: 1;                               /* Va a estar arriba de los demas elementos */
@@ -116,10 +127,9 @@ img:hover{
   transition: all 0.3s;
 }
 .botImg:hover{
-  box-shadow: none;
+  box-shadow: none !important;
   transform: scale(1.1) rotate(-5deg);      /* la imagen del bot se inclina un poquito */
 }
-
 .botChat{
   background-color: white;
   color: black;
