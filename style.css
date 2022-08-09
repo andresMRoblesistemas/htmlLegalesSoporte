@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans');
 :root {                                     /* Colores basicos para usar a lo largo del proyecto */
     --azul: #0277bd;
+    --azulSecundario: #bad7e5b2;
     --gris: #646769;
     --fondo: rgb(226, 226, 226);
   }
@@ -20,7 +21,6 @@ iframe{
 h2, h3, label{
     padding: 0 10px;                        /* Espaciado a los costados */
 }
-
 h4, h5{
     color: var(--gris);
     margin: 10px 0;                         /* Espaciado arriba y abajo */
@@ -32,10 +32,10 @@ ul{
   margin: 0 5px;
   color: var(--gris);
 }
-.page404{
+.cdm-page404{
   text-align: center;
 }
-button {
+.cdm-button {
   border-radius: 5px;
   margin: 5px;
   padding: 8px 15px;
@@ -43,7 +43,7 @@ button {
   background-color: var(--azul);
   border: 0px;
 }
-.navbar{
+.cdm-navbar{
   position: fixed;                          /* posicion fija en la pantalla */
   z-index: 1;                               /* Va a estar arriba de los demas elementos */
   display: block;                           /* El unico elemento en la linea */
@@ -53,17 +53,17 @@ button {
   box-shadow: 0 0 8px var(--gris);          /* sombra leve bajo la barra azul */
   color: white;                           /* color que afecta al texto y los iconos */
 }
-.titulo{
+.cdm-titulo{
   font-weight: 500;                         /* se afina la letra para contrarestar el estilo de h2 */
   float: left;
 }
-.activarMenu, .cerrarMenuLateral{
+.cdm-activarMenu, .cdm-cerrarMenuLateral{
   display: none;                            /* el icono de menu no se va a mostrar */
 }
-.menuLateral, .articulo{
+.cdm-menuLateral, .cdm-articulo{
   background-color: white;
 }
-.menuLateral{
+.cdm-menuLateral{
   position: fixed;
   overflow-y: scroll;                       /* permite que, aun siendo un div fijo, se pueda hacer scroll vertical*/
   top: 70px;                                /* la position fija comienza 70px alejada del borde superior */
@@ -72,39 +72,39 @@ button {
   max-width: 220px;                         /* se limita el ancho para que no crezca con el texto interior */
   font-size: 14px;
 }
-.seccionMenuLateral{
+.cdm-seccionMenuLateral{
   padding-left: 10px;
 }
-.colContenido{
+.cdm-colContenido{
   margin-left: 230px;                       /* espacio a la izquierda para no superponerse con .colTabladeContenido */
   margin-right: 10px;
 }
-.enlace {
+.cdm-enlace {
   padding: 0 10px 5px;
   display: block;
   text-decoration: none;                    /* le quita el subrayado a los links */
   color: var(--gris);
   word-wrap: break-word;                    /* si el texto es mas ancho que el div, continua abajo */
 }
-.enlace:hover{                              /* al pasar sobre un enlace cambia el color de la letra, el fondo y el peso */
+.cdm-enlace:hover{                              /* al pasar sobre un enlace cambia el color de la letra, el fondo y el peso */
   color: var(--azul);                       
-  background-color: #bad7e5b2;
+  background-color: var(--azulSecundario);
   font-weight: 700;
 }
-.articulo{
+.cdm-articulo{
   margin-top: 80px;
   padding: 20px 20px;
   margin-bottom: 80px;
 }
-.articulo h2{
+.cdm-articulo h2{
   padding: 0;
 }
 
-.filaImagenes{
+.cdm-filaImagenes{
   text-align: center;                       /* Las imagenes comienzan a acomodarse desde el centro */
   font-style: italic;
 }
-.imagen{
+.cdm-imagen{
   display: inline;
 }
 img{
@@ -120,17 +120,17 @@ img:hover{
   box-shadow: 0 0 8px var(--gris);
 }
 
-.bot{
+.cdm-bot{
   position: fixed;                          /* el icono del bot se encuentra flotando abajo a la derecha en la pantalla */
   bottom: 10px;
   right: 10px;
   transition: all 0.3s;
 }
-.botImg:hover{
+.cdm-botImg:hover{
   box-shadow: none !important;
   transform: scale(1.1) rotate(-5deg);      /* la imagen del bot se inclina un poquito */
 }
-.botChat{
+.cdm-botChat{
   background-color: white;
   color: black;
   position: fixed;
@@ -148,11 +148,11 @@ img:hover{
 
 }
 
-#abrirChat:target{
+#cdm-abrirChat:target{
   opacity:1;
   pointer-events:auto;
 }
-.cerrar, .cerrarMenuLateral{
+.cdm-cerrar, .cdm-cerrarMenuLateral{
   position: absolute;
   top: 20px;
   right: 20px;
@@ -165,37 +165,39 @@ img:hover{
 /* ↓↓↓↓ COLAPSAR ARTICULOS DE AYUDA ↓↓↓↓*/
 /* codigo original https://codepen.io/jason-knight/pen/ZEWPPVZ */
 
-.toggle_collapse {
-  display:block; 
+.cdm-toggle_collapse {
+  display:block;
 }
-
-.toggle_collapse, /* hide off screen */
-.toggle_collapse + *  .collapseAfter ~ * {
-	position:absolute;
-	top:-999em;
-	left:-999em;
+.cdm-collapseAfter{
   margin: 0;
 }
 
-.toggle_collapse:checked + *  .collapseAfter ~ * {
+.cdm-toggle_collapse, /* hide off screen */
+.cdm-toggle_collapse + *  .cdm-collapseAfter ~ * {
+	position:absolute;
+	top:-999em;
+	left:-999em;
+}
+
+.cdm-toggle_collapse:checked + *  .cdm-collapseAfter ~ * {
   position:static;
 }
 
-.toggle_collapse + * + label {
+.cdm-toggle_collapse + * + label {
   display:inline-block; /* make visible for screen media */
   color:var(--gris);
 }
 
-.toggle_collapse + * + label:before {
-	content:"Mostrar más";
+.cdm-toggle_collapse + * + label:before {
+	content:"Ver más";
   font-weight: 600;
 }
 
-.toggle_collapse:checked + * + label:before {
-	content:"Mostrar menos";
+.cdm-toggle_collapse:checked + * + label:before {
+	content:"Ver menos";
 }
 
-.toggle_collapse + * + label:after {
+.cdm-toggle_collapse + * + label:after {
 	content:"\25BC";
 	display:inline-block;
 	padding:0.4em 0 0 0.3em;
@@ -203,7 +205,7 @@ img:hover{
 	font-size:0.625em;
 }
 
-.toggle_collapse:checked + * + label:after {
+.cdm-toggle_collapse:checked + * + label:after {
 	content:"\25B2";
 }
 
@@ -212,24 +214,24 @@ img:hover{
 
 /* ESTOS CAMBIOS TOMAN EFECTO CUANDO LA PANTALLA TIENE UN ANCHO MENOR A 600PX */
 @media only screen and (max-width: 600px) {
-  .menuLateral{
+  .cdm-menuLateral{
       display: none;                        /* Desaparece la tabla de contenido */
   }
-  #menuLateral:target{
+  #cdm-menuLateral:target{
     z-index: 2;
     width: 100%;
   }
-  .cerrarMenuLateral, #menuLateral:target{
+  .cdm-cerrarMenuLateral, #cdm-menuLateral:target{
     display: block;                         
   }
-  .activarMenu{
+  .cdm-activarMenu{
     color: white;
       padding: 10px 0;
       font-size: 30px;
       float: right;                         /* Muestra el icono de menu desplegable a la derecha*/
       display: block;                       /* unico elemento de la linea pero no compite coon el .titulo ya que ambos tienen float */
   }
-  .colContenido{
+  .cdm-colContenido{
       width: 95%;
       margin-left: 10px;                    /* La columna con el contenido principal ocupa casi todo el ancho al desaparecer la tabla de contenido */
   }
