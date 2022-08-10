@@ -11,25 +11,7 @@
         <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
         <link rel="manifest" href="/site.webmanifest">
         <link rel="stylesheet" href="style.css">
-        <script>
-            function resizeIframe(obj) {
-              obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
-            }
-
-            const params = new URLSearchParams(document.location.search);
-            //params === null ? pagina = "../vistas/bienvenida.html" : pagina = params.get("s");
-            const pagina = params.get("s");
-            contador = 0;
-
-            // function cargarRutaEnMarco(pagina){
-            //     if (contador<1) {
-            //         document.getElementById("vista").src = pagina;
-            //         contador++;
-            //     } else {
-            //         pagina = "../vistas/bienvenida.html";
-            //     }
-            // }
-        </script>
+        <script src="cdm-funciones.js"></script>
     </head>
     <body >
         <div class="cdm-navbar">
