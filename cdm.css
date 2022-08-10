@@ -105,7 +105,7 @@ ul{
   text-align: center;                       /* Las imagenes comienzan a acomodarse desde el centro */
 }
 .cdm-imagen{
-  display: inline;
+  display: inline;                          /* Las imagenes se alinean una al lado de la otra */
 }
 img{
   max-height: 200px;                        /* Las imagenes tendran un alto max de 200px, y se separan de las demas imagenes 10px hacia la derecha y abajo */
