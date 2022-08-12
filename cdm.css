@@ -1,36 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans');
 :root {                                     /* Colores basicos para usar a lo largo del proyecto */
-    --azul: #0277bd;
-    --azulSecundario: #bad7e5b2;
-    --gris: #646769;
-    --fondo: rgb(226, 226, 226);
-  }
+  --azul: #0277bd;
+  --azulSecundario: #bad7e5b2;
+  --gris: #646769;
+  --fondo: rgb(226, 226, 226);
+}
 body {
-    font-family: 'Work Sans', sans-serif;
-    background-color: var(--fondo);
-    margin: 0;
-    padding: 0;
+  font-family: 'Work Sans', sans-serif;
+  background-color: var(--fondo);
+  margin: 0;
+  padding: 0;
 }
 * {
-    box-sizing: border-box;                 /* Cada ancho o alto de los elementos incluye el margin y el padding en la medida final */
+  box-sizing: border-box;                 /* Cada ancho o alto de los elementos incluye el margin y el padding en la medida final */
 }
 iframe{
   width: 100%;
   height: 100%;
 }
 h2, h3, label{
-    padding: 0 10px;                        /* Espaciado a los costados */
+  padding: 0 10px;                        /* Espaciado a los costados */
 }
 h4, h5{
-    color: var(--gris);
-    margin: 10px 0;                         /* Espaciado arriba y abajo */
+  color: var(--gris);
+  margin: 10px 0;                         /* Espaciado arriba y abajo */
 }
 hr{
-    margin: 10px;                           /* Divisor tiene una separacion por todos lados */
+  margin: 10px;                           /* Divisor tiene una separacion por todos lados */
 }
 ul{
   margin: 0 5px;
   color: var(--gris);
+}
+figcaption{
+  font-style: italic;
 }
 .cdm-button {
   border-radius: 7px;
@@ -57,7 +60,7 @@ ul{
 .cdm-activarMenu, .cdm-cerrarMenuLateral{
   display: none;                            /* el icono de menu no se va a mostrar */
 }
-.cdm-menuLateral, .cdm-articulo{
+.cdm-menuLateral, .cdm-articulo, .cdm-botChat{
   background-color: white;
 }
 .cdm-menuLateral{
@@ -67,6 +70,7 @@ ul{
   bottom: 0px;                              /* la position fija comienza pegada al borde inferior */
   padding-bottom: 50px;                     /* espacio en blanco para que al hacer scroll el contenido quede mas arriba */
   max-width: 220px;                         /* se limita el ancho para que no crezca con el texto interior */
+  min-width: 220px;
   font-size: 14px;
 }
 .cdm-seccionMenuLateral{
@@ -100,14 +104,13 @@ ul{
 .cdm-articulo h2{
   padding: 0;
 }
-
-.cdm-filaImagenes, .cdm-page404{
+.cdm-filaImagenes, .cdm-page404, figcaption{
   text-align: center;                       /* Las imagenes comienzan a acomodarse desde el centro */
 }
-.cdm-imagen{
-  display: inline;                          /* Las imagenes se alinean una al lado de la otra */
+.cdm-polaroid{
+  display: inline;                          /* Agrupa imagen con el comentario de abajo, cada polaroid aparece ua al lado de la otra*/
 }
-img{
+.cdm-imagen{
   max-height: 200px;                        /* Las imagenes tendran un alto max de 200px, y se separan de las demas imagenes 10px hacia la derecha y abajo */
   max-width: 400px;                         /* Las imagenes tendran un alto max de 400px para evitar miniaturas desproporcionadas */
   margin-bottom: 10px;
@@ -115,7 +118,7 @@ img{
   transition: all 0.3s;
 }
 
-img:hover{
+.cdm-imagen:hover{
   transform: scale(2);                      /* al pasar el mouse por encima, la imagen duplica su tamaño */
   box-shadow: 0 0 8px var(--gris);          /* la imagen obtiene una sombra alrededor para resaltarla del fondo */
 }
@@ -131,7 +134,6 @@ img:hover{
   transform: scale(1.1) rotate(-5deg);      /* la imagen del bot se inclina un poquito */
 }
 .cdm-botChat{
-  background-color: white;
   color: black;
   position: fixed;                          /* posicion fija en la pantalla, no importa el scroll. 110px separado de abajo y 12 del lado derecho */
   bottom:110px;
@@ -171,7 +173,7 @@ img:hover{
   margin: 0;
 }
 
-.cdm-toggle_collapse, /* hide off screen */
+.cdm-toggle_collapse, /* los elementos estan fuera de la vista de la pantalla */
 .cdm-toggle_collapse + *  .cdm-collapseAfter ~ * {
 	position:absolute;
 	top:-999em;
@@ -183,7 +185,7 @@ img:hover{
 }
 
 .cdm-toggle_collapse + * + label {
-  display:inline-block; /* make visible for screen media */
+  display:inline-block; /* los hace visibles en pantallas */
   color:var(--gris);
 }
 
