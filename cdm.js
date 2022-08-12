@@ -3,12 +3,12 @@ function resizeIframe(obj) {
   }
 
   const params = new URLSearchParams(document.location.search);
-  const pagina = (params.get("s") === null) ? "/vistas/bienvenida.html" : params.get("s");
-  const titulo = (params.get("t") === null) ? "00" : params.get("t");
+  const pagina = (params.get("s") ) ?? "/vistas/bienvenida.html";
+  const titulo = (params.get("t") ) ?? "00";
   contador = 0;
 
   function cargarRutaEnMarco(pagina){
-      if (contador<1) {
+      if (contador<2) {
           document.getElementById("vista").src = pagina+'#'+titulo;
           console.log(document.getElementById("vista").src);
           contador++;
