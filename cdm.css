@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans');
 :root {                                     /* Colores basicos para usar a lo largo del proyecto */
-  --azul: #0277bd;
+  --azul: #0277bd; /*#3367d6*/
   --azulSecundario: #bad7e5b2;
   --gris: #646769;
   --fondo: rgb(226, 226, 226);
