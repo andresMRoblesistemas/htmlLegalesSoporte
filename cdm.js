@@ -8,11 +8,9 @@ function resizeIframe(obj) {
   contador = 0;
 
   function cargarRutaEnMarco(pagina){
-      if (contador<2) {
+      if (contador<1) {
           document.getElementById("vista").src = pagina+'#'+titulo;
           console.log(document.getElementById("vista").src);
           contador++;
-      } else {
-          pagina = "404.html"
       }
   }
