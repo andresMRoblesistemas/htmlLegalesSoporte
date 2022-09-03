@@ -1,79 +1,86 @@
-<link rel="stylesheet" href="/cdm.css">
-    <div class="cdm-articulo">
-        <h2>Crear cuenta</h2>
-        <div id="00" class="cdm-aterriza-link"></div>
-        <h4>Paso 2 - Datos Personales</h4>
-        <p>
-            En esta pantalla deberá ingresar todos sus nombres, su apellido, el tipo y número de documento, su nacionalidad, fecha de nacimiento y el género que figura
-            en el documento.
-        </p>
-        <div class="cdm-filaImagenes">
-            <img class="cdm-imagen" src="/img/crear_cuenta/img-03.webp" alt="">
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <link rel="stylesheet" href="/cdm.css">
+    </head>
+    <body>
+        <div class="cdm-articulo">
+            <h2>Crear cuenta</h2>
+            <div id="00" class="cdm-aterriza-link"></div>
+            <h4>Paso 2 - Datos Personales</h4>
+            <p>
+                En esta pantalla deberá ingresar todos sus nombres, su apellido, el tipo y número de documento, su nacionalidad, fecha de nacimiento y el género que figura
+                en el documento.
+            </p>
+            <div class="cdm-filaImagenes">
+                <img class="cdm-imagen" src="/img/crear_cuenta/img-03.webp" alt="">
+            </div>
+            <div id="01" class="cdm-aterriza-link"></div>
+            <h4>Nombres</h4>
+            <p>
+                En el campo Nombre ingrese todos sus nombre como figuran en el documento.
+            </p>
+            <div id="02" class="cdm-aterriza-link"></div>
+            <h4>Apellido</h4>
+            <p>
+                En el campo Apellido ingrese todos sus apellidos como figuran en el documento.
+            </p>
+            <div id="03" class="cdm-aterriza-link"></div>
+            <h4>Tipo de Documento</h4>
+            <p>
+                Aqui se encontrara una lista que se desplaza lateralmente donde podrá elegir el tipo de documento con el que se quiera registrar.
+                Por el momento solo puede elegir entre los siguientes:
+                <ul>
+                    <li>DNI (Documento Nacionalidad de Identidad de Argentina): Puede ingresar un máximo de 8 números, sin espacios ni puntos entre los números.</li>
+                    <li>CUIT/CUIL (Clave Unica de Identificacion, puede ser Tributaria o Laboral): Puede ingresar un máximo de 11 números, sin espacios, guiones ni puntos
+                        entre los números.</li>
+                    <li>CRP (Certificado de Residencia Precaria)</li>
+                    <li>Pasaporte extranjero</li>
+                    <li>Documento extranjero</li>
+                </ul>
+            </p>
+            <div id="04" class="cdm-aterriza-link"></div>
+            <h4>Nacionalidad</h4>
+            <p>Seleccione la nacionalidad que figura en el documento</p>
+            <div id="05" class="cdm-aterriza-link"></div>
+            <h4>Fecha de nacimiento</h4>
+            <p>Para ingresar su fecha de nacimiento debera hacer clic en el icono del calendario (imagen izquierda), lo cual desplegará un calendario en pantalla (imagen derecha)
+                que deberá usar para elegir su fecha de nacimiento</p>
+            <p>El calendario esta restringido para que solo puedan ingresar al sistema personas mayores de 16 años, asi que cualquier fecha más cercana será imposible de ingresar.</p>
+            <div class="cdm-filaImagenes">
+                <div class="cdm-polaroid">
+                    <img class="cdm-imagen" src="/img/crear_cuenta/img-04.webp" alt="Icono calendario">
+                </div>
+                <div class="cdm-polaroid">
+                    <img class="cdm-imagen" src="/img/crear_cuenta/img-05.webp" alt="Icono calendario">
+                </div>
+            </div>
+            <p>
+                En las siguientes imágenes se muestra donde puede hacer clic para cambiar el año (imagen izquierda) y el mes (imagen derecha). Luego queda seleccionar el dia
+                y apretar donde dice Aceptar
+            </p>
+            <div class="cdm-filaImagenes">
+                <div class="cdm-polaroid">
+                    <img class="cdm-imagen" src="/img/crear_cuenta/img-06.webp" alt="Icono calendario">
+                </div>
+                <div class="cdm-polaroid">
+                    <img class="cdm-imagen" src="/img/crear_cuenta/img-07.webp" alt="Icono calendario">
+                </div>
+            </div>
+            <div id="06" class="cdm-aterriza-link"></div>
+            <h4>Género</h4>
+            <p>
+                Al final de la pantalla deberá ingresar el género que figura en su DNI.
+            </p>
+            <div class="cdm-filaImagenes">
+                <div class="cdm-polaroid">
+                    <img class="cdm-imagen" src="/img/crear_cuenta/img-08.webp" alt="Icono calendario">
+                </div>
+            </div>
+            <p>Al haber completado todos los campos podrá hacer clic en el boton que dice Siguiente, o en el que dice Regresar en caso de que quiera corregir alguna información
+                ingresada en el Paso 1.
+            </p>
+    
         </div>
-        <div id="01" class="cdm-aterriza-link"></div>
-        <h4>Nombres</h4>
-        <p>
-            En el campo Nombre ingrese todos sus nombre como figuran en el documento.
-        </p>
-        <div id="02" class="cdm-aterriza-link"></div>
-        <h4>Apellido</h4>
-        <p>
-            En el campo Apellido ingrese todos sus apellidos como figuran en el documento.
-        </p>
-        <div id="03" class="cdm-aterriza-link"></div>
-        <h4>Tipo de Documento</h4>
-        <p>
-            Aqui se encontrara una lista que se desplaza lateralmente donde podrá elegir el tipo de documento con el que se quiera registrar.
-            Por el momento solo puede elegir entre los siguientes:
-            <ul>
-                <li>DNI (Documento Nacionalidad de Identidad de Argentina): Puede ingresar un máximo de 8 números, sin espacios ni puntos entre los números.</li>
-                <li>CUIT/CUIL (Clave Unica de Identificacion, puede ser Tributaria o Laboral): Puede ingresar un máximo de 11 números, sin espacios, guiones ni puntos
-                    entre los números.</li>
-                <li>CRP (Certificado de Residencia Precaria)</li>
-                <li>Pasaporte extranjero</li>
-                <li>Documento extranjero</li>
-            </ul>
-        </p>
-        <div id="04" class="cdm-aterriza-link"></div>
-        <h4>Nacionalidad</h4>
-        <p>Seleccione la nacionalidad que figura en el documento</p>
-        <div id="05" class="cdm-aterriza-link"></div>
-        <h4>Fecha de nacimiento</h4>
-        <p>Para ingresar su fecha de nacimiento debera hacer clic en el icono del calendario (imagen izquierda), lo cual desplegará un calendario en pantalla (imagen derecha)
-            que deberá usar para elegir su fecha de nacimiento</p>
-        <p>El calendario esta restringido para que solo puedan ingresar al sistema personas mayores de 16 años, asi que cualquier fecha más cercana será imposible de ingresar.</p>
-        <div class="cdm-filaImagenes">
-            <div class="cdm-polaroid">
-                <img class="cdm-imagen" src="/img/crear_cuenta/img-04.webp" alt="Icono calendario">
-            </div>
-            <div class="cdm-polaroid">
-                <img class="cdm-imagen" src="/img/crear_cuenta/img-05.webp" alt="Icono calendario">
-            </div>
-        </div>
-        <p>
-            En las siguientes imágenes se muestra donde puede hacer clic para cambiar el año (imagen izquierda) y el mes (imagen derecha). Luego queda seleccionar el dia
-            y apretar donde dice Aceptar
-        </p>
-        <div class="cdm-filaImagenes">
-            <div class="cdm-polaroid">
-                <img class="cdm-imagen" src="/img/crear_cuenta/img-06.webp" alt="Icono calendario">
-            </div>
-            <div class="cdm-polaroid">
-                <img class="cdm-imagen" src="/img/crear_cuenta/img-07.webp" alt="Icono calendario">
-            </div>
-        </div>
-        <div id="06" class="cdm-aterriza-link"></div>
-        <h4>Género</h4>
-        <p>
-            Al final de la pantalla deberá ingresar el género que figura en su DNI.
-        </p>
-        <div class="cdm-filaImagenes">
-            <div class="cdm-polaroid">
-                <img class="cdm-imagen" src="/img/crear_cuenta/img-08.webp" alt="Icono calendario">
-            </div>
-        </div>
-        <p>Al haber completado todos los campos podrá hacer clic en el boton que dice Siguiente, o en el que dice Regresar en caso de que quiera corregir alguna información
-            ingresada en el Paso 1.
-        </p>
-
-    </div>
+    </body>
+</html>
